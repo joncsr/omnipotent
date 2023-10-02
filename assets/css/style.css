@@ -64,7 +64,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #ae00ff;
+  background: #ff5100;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -126,7 +126,7 @@ h6 {
 
 #header .logo img {
   padding: 0;
-  max-height: 110px;
+  max-height: 70px;
 }
 
 /*--------------------------------------------------------------
@@ -160,7 +160,7 @@ h6 {
   padding: 10px 0 10px 30px;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
-  color: #ec8be8;
+  color:  #ff5100;
   font-weight: 500;
   white-space: nowrap;
   transition: 0.3s;
@@ -177,7 +177,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #79096a;
+  color: #d87607;
 }
 
 .navbar .dropdown ul {
@@ -351,18 +351,19 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 #hero {
   width: 100%;
   height: inherit;
   position: relative;
-  background: url("../img/herobg3.svg") center bottom no-repeat;
+  background: url("../img/herobg10.svg") center bottom no-repeat;
   background-size: cover;
-  padding: 230px 0 120px 0;
-
+  padding: 290px 0 120px 0;
+  z-index: 0;
 }
 
 #hero .container{
- margin-bottom: 100px;
+ margin-bottom: 120px;
 }
 
 @media (max-width: 991px) {
@@ -377,9 +378,12 @@ h6 {
   }
 }
 
-#hero .hero-img {
+#hero .hero-img{
   width: 50%;
   float: right;
+
+
+
 }
 
 @media (max-width: 991px) {
@@ -393,6 +397,12 @@ h6 {
 #hero .hero-info {
   width: 50%;
   float: left;
+
+}
+
+#hero .img-fluid{
+  border-radius: 50% 70% 30% 50% / 70% 50% 30% 70% !important;
+
 }
 
 @media (max-width: 991px) {
@@ -444,13 +454,13 @@ h6 {
 }
 
 #hero .hero-info .btn-get-started {
-  background: #ae09e0;
-  border: 2px solid #52baff;
+  background: #e96d0e;
+  border: 2px solid #f0f0ed;
   color: #fff;
 }
 
 #hero .hero-info .btn-get-started:hover {
-  background: none;
+  background: #c75702;
   border-color: #fff;
   color: #fff;
 }
@@ -460,8 +470,8 @@ h6 {
 }
 
 #hero .hero-info .btn-services:hover {
-  background: #007bff;
-  border-color: #007bff;
+  background: #e96d0e;
+  border-color: #fafafa;
   color: #fff;
 }
 
@@ -476,7 +486,7 @@ section {
 --------------------------------*/
 .section-header h3 {
   font-size: 60px;
-  color: #ffffff;
+  color: #ec7e17;
   text-align: center;
   font-weight: 700;
   position: relative;
@@ -491,6 +501,9 @@ section {
   color: #fcfafb;
   width: 50%;
 }
+
+
+
 
 @media (max-width: 767px) {
   .section-header p {
@@ -569,13 +582,24 @@ section {
 /* About Us Section
 --------------------------------*/
 #about {
-  background: url("../img/herobg4.svg") center bottom no-repeat;
+  background: url("../img/bg8.svg") center bottom no-repeat;
   background-size: cover;
-  padding: 100px 0 120px 0;
+  padding: 80px 0 120px 0;
   
 }
 
-
+#about .about-extra .btn-services {
+  border: 2px solid #fff;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Align the content to the right */
+}
+#about .about-extra .btn-services:hover {
+  background: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
 
 #about .container .content {
   background: #fff;
@@ -583,7 +607,7 @@ section {
 }
 
 #about .about-container .title {
-  color: #333;
+  color: #f07604;
   font-weight: 700;
   font-size: 32px;
 }
@@ -648,23 +672,37 @@ section {
 
 
 
-#about .about-extra h4 {
-  font-weight: 700;
-  font-size: 24px;
-  color:#ffffff;
+#about .about-extra h3 {
+  font-weight: 900;
+  font-size: 25px;
+  color:#ec5904;
+}
+
+.about-extra .img-fluid{
+  border-radius: 60% 90% 70% 70% / 60% 90% 70% 70% !important;
+  border: 5px solid #fafafa; /* Replace with the outline color of your choice */
 }
 
 
 #about .about-extra p {
-  color:#ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  color:#ec5904;
 }
 /* Services Section
 --------------------------------*/
 #services {
 
-  background: url("../img/herobg3.svg") center bottom no-repeat;
+  background: url("../img/herobg11.svg") center bottom no-repeat;
   background-size: cover;
+
 }
+
+#services .section-header h3,
+#services .section-header p {
+  color: #fff;
+}
+
 
 #services .box {
   padding: 30px;
@@ -694,10 +732,48 @@ section {
 
 
 
-.img-responsive {
+.img1 .img-responsive {
+  max-width: 100%; /* Adjust as needed */
+  height: auto;
+  border-radius: 50% 30% 70% 50% / 30% 70% 70% 50% !important;
+  border: 5px solid #fafafa; /* Replace with the outline color of your choice */
+}
+
+
+.img2 .img-responsive {
   max-width: 100%; /* Adjust as needed */
   height: auto; 
-  border-radius: 50px;/* Automatically maintain the aspect ratio */
+  border-radius: 70% 50% 50% 70% / 70% 30% 30% 70% !important;
+  border: 5px solid #fafafa; 
+}
+
+
+.img3 .img-responsive {
+  max-width: 100%; /* Adjust as needed */
+  height: auto; 
+  border-radius: 50% 70% 30% 70% / 30% 70% 70% 50% !important;
+  border: 5px solid #fafafa; 
+}
+
+.img4 .img-responsive {
+  max-width: 100%; /* Adjust as needed */
+  height: auto; 
+  border-radius: 70% 30% 50% 70% / 70% 70% 30% 50% !important;
+  border: 5px solid #fafafa; 
+}
+
+.img5 .img-responsive {
+  max-width: 100%; /* Adjust as needed */
+  height: auto; 
+  border-radius: 30% 50% 70% 30% / 70% 30% 50% 70% !important;
+  border: 5px solid #fafafa; 
+}
+
+.img6 .img-responsive {
+  max-width: 100%; /* Adjust as needed */
+  height: auto; 
+  border-radius: 50% 70% 30% 50% / 70% 50% 30% 70% !important;
+  border: 5px solid #fafafa; 
 }
 
 
@@ -729,7 +805,7 @@ section {
 }
 
 #services .box:hover .title a {
-  color: #007bff;
+  color: #ff7300;
 }
 
 #services .description {
@@ -741,7 +817,7 @@ section {
 
 #why-us {
   padding: 60px 0;
-  background: url("../img/herobg4.svg") center bottom no-repeat;
+  background: url("../img/herobg12.svg") center bottom no-repeat;
   background-size: cover;
 
 }
@@ -752,8 +828,8 @@ section {
 }
 
 #why-us .card {
-  background: #00458f;
-  border-color: #00458f;
+  background: #ffb14a;
+  border-color: #f35106;
   border-radius: 10px;
   margin: 0 15px;
   padding: 15px 0;
@@ -770,8 +846,8 @@ section {
 }
 
 #why-us .card:hover {
-  background: #003b7a;
-  border-color: #003b7a;
+  background: #f35106;
+  border-color: #db6606;
 }
 
 #why-us .card i {
@@ -1026,14 +1102,20 @@ section {
 --------------------------------*/
 #testimonials {
  
-  padding: 60px 0;
-  background: url("../img/herobg3.svg") center bottom no-repeat;
+  padding: 200px 0;
+  background: url("../img/herobg13.svg") center bottom no-repeat;
   
 }
 
 #testimonials .section-header {
   margin-bottom: 40px;
 }
+
+#testimonials .section-header h3 {
+  color: #fff;
+}
+
+
 
 #testimonials .testimonials-carousel,
 #testimonials .testimonials-slider {
@@ -1225,9 +1307,9 @@ section {
 /* Contact Section
 --------------------------------*/
 #contact {
-  background: url("../img/herobg4.svg") center bottom no-repeat;
+  background-color: #ffffff;
   background-size: cover;
-  overflow: hidden;
+  padding: 100px 0;
 }
 
 #contact .section-header {
@@ -1284,7 +1366,7 @@ section {
 
 #contact .info i {
   font-size: 32px;
-  color: #007bff;
+  color: #ff7b00;
   float: left;
   line-height: 0;
 }
@@ -1294,6 +1376,8 @@ section {
   line-height: 28px;
   font-size: 14px;
 }
+
+
 
 #contact .php-email-form .error-message {
   display: none;
@@ -1341,15 +1425,17 @@ section {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
+  border-color: #ecbb82;
 }
 
 #contact .php-email-form input:focus,
 #contact .php-email-form textarea:focus {
-  border-color: #007bff;
+  border-color: #c77b25;
 }
 
 #contact .php-email-form input {
   padding: 10px 15px;
+  outline: #f06f05c4;
 }
 
 #contact .php-email-form textarea {
@@ -1357,7 +1443,7 @@ section {
 }
 
 #contact .php-email-form button[type=submit] {
-  background: #007bff;
+  background: #ff7b00;
   border: 0;
   border-radius: 20px;
   padding: 8px 30px;
@@ -1366,7 +1452,7 @@ section {
 }
 
 #contact .php-email-form button[type=submit]:hover {
-  background: #0067d5;
+  background: #d54e00e7;
   cursor: pointer;
 }
 
@@ -1384,7 +1470,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("../img/herobg3.svg") center bottom no-repeat;
+  background: url("../img/herobg15.svg") center bottom no-repeat;
   padding: 0 0 30px 0;
   color: #eee;
   font-size: 14px;
@@ -1395,8 +1481,8 @@ section {
 
 
 #footer .footer-top {
-  background: url("../img/herobg4.svg") center bottom no-repeat;
-  padding: 60px 0 30px 0;
+  background: url("../img/herobg15.svg")  center bottom no-repeat;
+  padding:380px 0 30px 0;
 }
 
 #footer .footer-top .footer-info {
